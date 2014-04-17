@@ -6,7 +6,7 @@
     <ProjectGuid>{D796B6EE-37D8-4C92-A86A-77EE4ADA0F4F}</ProjectGuid>
     <ProjectTypeGuids>{F5B4F3BC-B597-4E2B-B552-EF5D8A32436F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>plcrashreporterxamarin</RootNamespace>
+    <RootNamespace>PLCrashreporterBinding</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>plcrashreporter-xamarin</AssemblyName>
   </PropertyGroup>
@@ -44,4 +44,12 @@
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\plcrashreporter.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\plcrashreporter.linkwith.cs">
+      <DependentUpon>plcrashreporter.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
