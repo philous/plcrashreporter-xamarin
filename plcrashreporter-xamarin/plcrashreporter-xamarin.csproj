@@ -45,11 +45,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
   <ItemGroup>
-    <BundleResource Include="Resources\plcrashreporter.a" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Resources\plcrashreporter.linkwith.cs">
       <DependentUpon>plcrashreporter.a</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="Resources\plcrashreporter.a" />
   </ItemGroup>
 </Project>
